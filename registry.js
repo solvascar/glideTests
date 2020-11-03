@@ -27,8 +27,6 @@ test('Registering and creating transaction', async t => {
     await setup
         .setupLicenseVerificationNext('42424242', 'San Francisco Association of Realtors', randomString(6));
 
-    //await t.expect(Selector('h1.app-trans-page-title__title').innerText).eql('Transactions', 'Set up did not finish succesfully', {timeout: 5000});
-
     await transaction.verifyTitle();
     await transaction.createTransaction(agent_firstname+' '+agent_lastname, 'Market Street', '1111', 'San Francisco', '94103', 'Listing', 'Preparing');
 });
