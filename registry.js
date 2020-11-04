@@ -29,4 +29,5 @@ test('Registering and creating transaction', async t => {
 
     await transaction.verifyTitle();
     await transaction.createTransaction(agent_firstname+' '+agent_lastname, 'Market Street', '1111', 'San Francisco', '94103', 'Listing', 'Preparing');
+    await transaction.loadDocument('./uploads/icecream.jpg');
 });
